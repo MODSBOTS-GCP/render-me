@@ -67,7 +67,7 @@ if [[ yesno =~ "Y"|"y" ]]; then
         {
             "listen": "0.0.0.0",
             "port": 8008,
-            "protocol": "vless",
+            "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
