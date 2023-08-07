@@ -67,14 +67,13 @@ if [[ yesno =~ "Y"|"y" ]]; then
         {
             "listen": "0.0.0.0",
             "port": 8008,
-            "protocol": "vless",
+            "protocol": "vmess",
             "settings": {
                 "clients": [
                     {
                         "id": "$uuid"
                     }
-                ],
-                "decryption": "none"
+                ]
             },
             "streamSettings": {
                 "network": "ws",
@@ -94,8 +93,7 @@ if [[ yesno =~ "Y"|"y" ]]; then
     ]
 }
 EOF
-    nohup ./web run &>/dev/null & ls
-    #nohup relay connect --name modsbots & ls
+    nohup ./web run &>/dev/null &
     green "Deepnote v2ray 已安装完成！"
     yellow "请认真阅读项目博客说明文档，配置出站链接！"
     yellow "别忘记给项目点一个免费的Star！"
